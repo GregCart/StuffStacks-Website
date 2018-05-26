@@ -1,0 +1,18 @@
+package testers;
+
+import java.io.File;
+import java.net.URL;
+import java.sql.Date;
+
+import Objects.Video;
+
+public class testBook {
+	
+	File f = new File("D:\\Drives\\Games-Anime Drive\\Animes\\Blood+ (sub) 2\\season 1\\S1E1.mp4-720.mp4");
+	URL u = new URL("https://otakustream.tv/anime/blood-plus/episode-1/");
+	@SuppressWarnings("deprecation")
+	Date d = new Date(2005, 10, 8);
+	Video v = new Video("First Kiss", "Production I.G.", "anime", 1.1, f, u, 23.54, d, true);
+	
+	insertVideo(SS_Con, v);
+}

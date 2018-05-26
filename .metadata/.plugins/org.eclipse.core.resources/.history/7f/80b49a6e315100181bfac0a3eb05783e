@@ -1,0 +1,21 @@
+package Connections;
+
+import java.sql.*;
+
+public class DB_Con {
+
+	public static void main(String[] args) {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String URL = "jdbc:mysql://127.0.0.1:3306/";
+			String user = "root";
+			String pass = "P@ssw0rd";
+			Connection con = DriverManager.getConnection(URL, user, pass)
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

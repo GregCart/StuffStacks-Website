@@ -1,0 +1,11 @@
+package testers;
+
+import java.io.File;
+
+public class testBook {
+	
+	File f = new File("D:\\Drives\\Games-Anime Drive\\Animes\\Blood+ (sub) 2\\season 1\\S1E1.mp4-720.mp4");
+	URL u = new URL();
+	Video v = new Video("First Kiss", "Production I.G.", "anime", 1.1, f, );
+
+}

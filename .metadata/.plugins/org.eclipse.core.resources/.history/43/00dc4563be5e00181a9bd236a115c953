@@ -1,0 +1,45 @@
+package SQL_Conns;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import Objects.Book;
+import Objects.Video;
+
+
+public class SS_Con {
+	
+	public int objID;
+	public Video v;
+
+
+	public SS_Con(Video v, int objID) {
+		this.v = v;
+		this.objID = objID;
+	}
+	
+	public void estCon() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String URL = "jdbc:mysql://127.0.0.1:3306/";
+			String user = "root";
+			String pass = "P@ssw0rd";
+			Connection con = DriverManager.getConnection(URL, user, pass);
+			
+			switch (objID) {
+			case 0:
+				
+			case 1:
+				
+			case 2:
+				
+			case 3:
+				SS_Video_Stmts.insertVideo(con, v);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

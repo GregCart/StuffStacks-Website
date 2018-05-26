@@ -1,0 +1,10 @@
+package testers;
+
+import java.io.File;
+
+public class testBook {
+	
+	File f = new File();
+	Video v = new Video("First Kiss", "Production I.G.", "anime", 1.1, )
+
+}

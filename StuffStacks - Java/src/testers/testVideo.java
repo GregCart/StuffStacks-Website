@@ -1,0 +1,36 @@
+package testers;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.sql.Date;
+import java.sql.SQLException;
+
+import Objects.Video;
+import SQL_Conns.SS_Con;
+
+public class testVideo {
+	
+	public static void main(String[] args) {
+		File f = new File("D:\\Drives\\Games-Anime Drive\\Animes\\Blood+ (sub) 2\\season 1\\S1E1.mp4-720.mp4");
+		try {
+			System.out.println("HEERE I AM");
+			URL u = new URL("https://otakustream.tv/anime/blood-plus/episode-1/");
+			@SuppressWarnings("deprecation")
+			Date d = new Date(2005, 10, 8);
+			Video v = new Video("First Kiss", "Production I.G.", "anime", 1.1, f, u, 23.54, d, true);
+			
+			SS_Con.estCon(v, 3, 1);
+			System.out.println("First Kiss succesfully filed away!");
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

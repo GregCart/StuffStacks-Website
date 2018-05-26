@@ -1,0 +1,34 @@
+package Connections;
+
+import java.sql.*;
+
+public class DB_Con {
+	
+	public static Object table;
+
+	public static void main(String[] args) {
+		
+		switch (table) {
+			case : Book {
+		
+			}
+		}
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String URL = "jdbc:mysql://127.0.0.1:3306/";
+			String user = "root";
+			String pass = "P@ssw0rd";
+			Connection con = DriverManager.getConnection(URL, user, pass);
+			
+			con.prepareStatement("INSERT INTO stuffstacks." +  + " VALUES (?, ?, ?, ?, ?)");
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

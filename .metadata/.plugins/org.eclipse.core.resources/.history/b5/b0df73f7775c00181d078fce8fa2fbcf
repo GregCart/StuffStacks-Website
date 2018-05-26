@@ -1,0 +1,61 @@
+package SQL_Conns;
+
+import java.sql.*;
+import java.util.logging.Logger;
+
+import Objects.Book;
+
+public class SS_Book_Stmts {
+	
+	private static Boolean duplicate;
+	
+	public static Boolean ifExists(Connection con, Book b) {
+		try {
+			PreparedStatement stmt = con.prepareStatement("Select * FROM stuffstacks.library WHERE title = ?" + b.getTitle());
+			ResultSet rs = stmt.executeQuery();
+			if (rs.wasNull()) {
+				return false;
+			} else {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void insertBook(Connection con, Book b) {
+		duplicate = ifExists(con, b);
+		if (duplicate == true) {
+			Logger.getLogger(b.getTitle() + "already exists!"); 
+		} else {
+			try {
+				Statement stm = con.createStatement();
+				stm.executeQuery("INSERT INTO stuffstacks.library VALUES (" + b.toString() + ")");
+				Logger.getLogger(b.toString());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static Book retrieveBook(Connection con, Book b) {
+		try {
+			duplicate = ifExists(con, b);
+			if (duplicate == true) {
+				Statement stm = con.createStatement();
+				ResultSet rs = stm.executeQuery("Select * FROM stuffstacks.library WHERE title = " + b.getTitle());
+				//loop thru rs to create book
+				return b;
+			} else {
+				Logger.getLogger(b.getTitle() + "doesn't exist!");
+				return null;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

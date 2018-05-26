@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>StuffStacks - Home</title>
+		<script type="text/javascript"></script>
+		<style type="text/css"></style>
+	</head>
+	<body>
+		<div id="Books" class="selector"></div>
+		<div id="Image" class="selector"></div>
+		<div id="Song" class="selector"></div>
+		<div id="Video" class="selector"></div>
+	</body>
+</html>

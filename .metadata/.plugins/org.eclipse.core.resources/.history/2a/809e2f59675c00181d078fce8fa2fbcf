@@ -1,0 +1,45 @@
+package testSolutions;
+
+import java.sql.Date;
+import java.util.ArrayList;
+
+import Objects.Book;
+import Objects.Image;
+import Objects.Song;
+import Objects.Video;
+
+public class Usables {
+	
+	private Book B;
+	private Song S;
+	private Image I;
+	private Video V;
+	
+	
+	public Usables(Book B) {
+		this.B = B;
+	}
+	
+	public Usables(Song S) {
+		this.S = S;
+	}
+	
+	public Usables(Image I) {
+		this.I = I;
+	}
+	
+	public Usables( Video V) {
+		this.V = V;
+	}
+	
+	public ArrayList<String> useBook() {
+		String s1 = B.getAuthor();
+		String s2 = B.getPublisher();
+		String s3 = B.getSeries();
+		String s4 = B.getTitle();
+		Date d5 = B.getDate();
+		String i6 = B.getLength().toString();
+		String i7 = B.getSeriesNum().toString();
+		String[] usableBook = {s1, s2, s3, s4, d5.toString(), i6, i7};
+	}
+}

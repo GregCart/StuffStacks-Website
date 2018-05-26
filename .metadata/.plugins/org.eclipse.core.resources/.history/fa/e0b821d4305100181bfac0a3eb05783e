@@ -1,0 +1,12 @@
+package Connections;
+
+import java.sql.*;
+
+public class DB_Con {
+
+	public static void main(String[] args) {
+		
+		com.mysql.jdbc.Driver();
+		
+	}
+}

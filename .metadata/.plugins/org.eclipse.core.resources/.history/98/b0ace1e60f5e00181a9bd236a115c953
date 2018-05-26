@@ -1,0 +1,63 @@
+package SQL_Conns;
+
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Logger;
+
+import Objects.Book;
+import testSolutions.Usables;
+
+public class SS_Book_Stmts {
+	
+	private static Boolean duplicate;
+	
+	public static Boolean ifExists(Connection con, Book b) throws SQLException {
+		PreparedStatement stmt = con.prepareStatement("Select * FROM stuffstacks.library WHERE title = ?" + b.getTitle());
+		ResultSet rs = stmt.executeQuery();
+		if (rs.wasNull()) {
+			return false;
+		} else {
+			return true;
+		}
+}
+	
+	public static void insertBook(Connection con, Book b) throws SQLException {
+		duplicate = ifExists(con, b);
+		if (duplicate == true) {
+			Logger.getLogger(b.getTitle() + "already exists!"); 
+		} else {
+			try {
+				Statement stm = con.createStatement();
+				stm.executeQuery("INSERT INTO stuffstacks.library VALUES (" + Usables.useBook(b) + ")");
+				Logger.getLogger(b.toString());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static Book retrieveBook(Connection con, Book b) throws SQLException {
+		duplicate = ifExists(con, b);
+		if (duplicate == true) {
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("Select * FROM stuffstacks.library WHERE title = " + b.getTitle());
+			//loop thru rs to create book
+			InputStream in = rs.getBlob(8).getBinaryStream();
+			OutputStream out = new FileOutputStream(rs.getString(2));
+			b = Book(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(6), rs.getInt(5), rs.getInt(7), IOUtils.copy(in, out), rs.getDate(10), rs.getBoolean(11));
+			b = Book(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(6), rs.getInt(5), rs.getInt(7), rs.getString(9), rs.getDate(10), rs.getBoolean(11));
+			return b;
+		} else {
+			Logger.getLogger(b.getTitle() + "doesn't exist!");
+			return null;
+		}
+	}
+	
+}
