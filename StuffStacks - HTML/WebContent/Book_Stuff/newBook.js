@@ -12,6 +12,9 @@ $(document).ready(function() {
 	length = document.getElementById("lengt");
 	link = document.getElementById("Link");
 	file = document.getElementById("fileN");
+});
+
+function bindBook() {
 	if (document.getElementById("isS").checked == true) {
 		isSeries = true;
 		series = document.getElementById("serName");
@@ -20,8 +23,17 @@ $(document).ready(function() {
 		isSeries = false;
 		series, sNum = null;
 	}
-});
-
-function bindBook() {
-	book = [tite, author, series, publisher, length, seriesNum, fileName, link, datePub,isSeries];
+	book = {tite, author, series, publisher, length, seriesNum, fileName, link, datePub, isSeries};
+	book.stringify();
 }
+
+function showSeries() {
+	if (document.getElementById("isS").checked == true) {
+		document.getElementById("series").style.visibility = "Visible";
+		document.getElementById("seriesNum").style.visibility = "Visible";
+	} else {
+		document.getElementById("series").style.visibility = "Hidden";
+		document.getElementById("seriesNum").style.visibility = "Hidden";
+	}
+}
+

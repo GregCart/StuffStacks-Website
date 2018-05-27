@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Add a Book</title>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="newBook.js"></script>
 		<style type="text/css"></style>
 	</head>
@@ -15,9 +16,9 @@
 			<div id=length>Number of Pages: <input type="number" id=lengt></div>
 			<div id=fileName>If you have a pdf, Specify the filepath: <input type=file id=fileN></div>
 			<div id=link>If you have a link, paste it Here: <input type="url" id=Link></div>
-			<div id=isSeries>Check if part of series: <input type=checkbox id=isS></div>
-			<div id=series>Series Name: <input type=text id=serName></div>
-			<div id=seriesNum>Number in Series: <input type=number id=seriesN></div>
+			<div id=isSeries>Check if part of series: <input type=checkbox id=isS onChange="showSeries()"></div>
+			<div id=series style=visibility:hidden>Series Name: <input type=text id=serName></div>
+			<div id=seriesNum style=visibility:hidden>Number in Series: <input type=number id=seriesN></div>
 		</form>
 	</body>
 </html>
