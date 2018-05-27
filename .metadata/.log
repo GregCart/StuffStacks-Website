@@ -3011,3 +3011,9 @@ org.eclipse.core.runtime.AssertionFailedException: assertion failed:
 
 !ENTRY org.eclipse.core.resources 4 380 2018-05-27 06:15:46.213
 !MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-27 10:34:56.329
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-27 10:34:56.337
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

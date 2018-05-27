@@ -28,19 +28,12 @@ function storeVid() {
 	}
 	var SE = {sName: {sNum: eName}, eName};
 	video = {title, creator, series, type, length, fileName, link, SE, datePub, isSeries};
-	video.stringify();
 }
 
 function showSeason() {
 	if (document.getElementById("isS").checked == true) {
-		document.getElementById("seasonName").style.visibility = "Visible";
-		document.getElementById("seasonNum").style.visibility = "Visible";
-		document.getElementById("epiName").style.visibility = "Visible";
-		document.getElementById("epiNum").style.visibility = "Visible";
+		document.getElementById("seasons").style.visibility = "Visible";
 	} else {
-		document.getElementById("seasonName").style.visibility = "Hidden";
-		document.getElementById("seasonNum").style.visibility = "Hidden";
-		document.getElementById("epiName").style.visibility = "Hidden";
-		document.getElementById("epiNum").style.visibility = "Hidden";
+		document.getElementById("seasons").style.visibility = "Hidden";
 	}
 }

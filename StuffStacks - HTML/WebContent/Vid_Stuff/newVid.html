@@ -8,19 +8,21 @@
 		<style type="text/css"></style>
 	</head>
 	<body>
-		<form method=get target="" onsubmit="storeVid()" action="../src/SS_servelets/vHome.java">
-			<div id=title>Title:<input type="text" id=titl></div>
-			<div id=author>Creator: <input type=text id=create></div>
-			<div id=vidType>Video Type: <input type=text id=type></div>
-			<div id=released>Date you found it: <input type=date id=found></div>
-			<div id=length>Length of Video <i>(w/ "." instead of ":")</i>: <input type="text" id=lengt></div>
-			<div id=fileName>If you have a .mp4, Specify the filepath: <input type=file id=fileN></div>
-			<div id=link>If you have a link, paste it Here: <input type="url" id=Link></div>
-			<div id=isSeries>Check if part of Season: <input type=checkbox id=isS onChange="showSeason()"></div>
-			<div id=season style=visibility:hidden>Season Name: <input type=text id=seasonName></div>
-			<div id=seasonNum style=visibility:hidden>Season Number: <input type=number id=seasnNum></div>
-			<div id=espisodeName style=visibility:hidden>Episode Name: <input type=text id=epiName></div>
-			<div id=episodeNum style=visibility:hidden>Episode Number: <input type=number id=epiNum></div>
+		<form method=get target="" onsubmit="storeVid()" action="../vHome">
+			<div id=title>Title:<input type="text" id=titl name=titl></div>
+			<div id=author>Creator: <input type=text id=create name=create></div>
+			<div id=vidType>Video Type: <input type=text id=type name=type></div>
+			<div id=released>Date you found it: <input type=date id="found" name="found" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"></div>
+			<div id=length>Length of Video <i>(w/ "." instead of ":")</i>: <input type="text" id=lengt name=lengt></div>
+			<div id=fileName>If you have a .mp4, Specify the filepath: <input type=file id=fileN name=fileN></div>
+			<div id=link>If you have a link, paste it Here: <input type="url" id=Link name=Link></div>
+			<div id=isSeries>Check if part of Season: <input type=checkbox id=isS name=isS onChange="showSeason()"></div>
+			<div id=seasons name=seasons style=visibility:hidden>
+				<div id=season>Season Name: <input type=text id=seasonName name=seasonName></div>
+				<div id=seasonNum>Season Number: <input type=number id=seasnNum name=seasnNum></div>
+				<div id=espisodeName>Episode Name: <input type=text id=epiName name=epiName></div>
+				<div id=episodeNum>Episode Number: <input type=number id=epiNum name=epiNum></div>
+			</div>
 			<button type=submit value=submit>Submit</button>
 		</form>
 	</body>
