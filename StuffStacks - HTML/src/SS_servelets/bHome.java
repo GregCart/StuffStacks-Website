@@ -5,6 +5,8 @@ import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +40,8 @@ public class bHome extends HttpServlet {
 		}
 		
 		FileOutputStream fOut = new FileOutputStream(f);
-		FileDescriptor fD = response.getOutputStream.getFD();
+		OutputStream os = response.getOutputStream();
+		FileDescriptor fD = ((FileOutputStream) os).getFD();
 		FileInputStream in = new FileInputStream(fD);
 		IOUtils.copy(in, fOut);
 
