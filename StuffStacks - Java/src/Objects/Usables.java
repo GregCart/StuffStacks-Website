@@ -78,7 +78,7 @@ public class Usables {
 		String s3 = V.getTitle();
 		Date d5 = V.getDate();
 		double i6 = V.getLength();
-		String s7 = Double.toString(V.getSE());
+		String s7 = V.getSE().toString();
 		URL u8 = V.getLink();
 		File f9 = V.getFileName();
 		Boolean b10 = V.getIsSeason();

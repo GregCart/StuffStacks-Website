@@ -61,12 +61,12 @@ public class SS_Video_Stmts {
 			Statement stm = con.createStatement();
 			ResultSet rs = stm.executeQuery("Select * FROM stuffstacks.folder WHERE video_title LIKE " + v.getTitle());
 			//use rs to create book
-			double d;
-			if (rs.getDouble(5) != (Double) null) {
+			String d;
+			if (rs.getString(5) != null) {
 				//android.text.TextUtils.join(",", Video.getPeople());
-				d = rs.getDouble(5);
+				d = rs.getString(5);
 			} else {
-				d = (Double) null;
+				d = null;
 			}
 			if (rs.getString(7) == null) {
 				InputStream in = rs.getBlob(6).getBinaryStream();

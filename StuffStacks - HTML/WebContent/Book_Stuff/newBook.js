@@ -23,7 +23,7 @@ function bindBook() {
 		isSeries = false;
 		series, sNum = null;
 	}
-	book = {tite, author, series, publisher, length, seriesNum, fileName, link, datePub, isSeries};
+	book = {title, author, series, publisher, length, seriesNum, fileName, link, datePub, isSeries};
 	book.stringify();
 }
 

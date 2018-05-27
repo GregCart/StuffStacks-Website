@@ -8,7 +8,7 @@
 		<style type="text/css"></style>
 	</head>
 	<body>
-		<form>
+		<form method=get target=bHome.html onsubmit="bindBook()">
 			<div id=title>Title:<input type="text" id=titl></div>
 			<div id=author>Author: <input type=text id=autho></div>
 			<div id=publisher>Publisher: <input type=text id=publish></div>
@@ -19,6 +19,7 @@
 			<div id=isSeries>Check if part of series: <input type=checkbox id=isS onChange="showSeries()"></div>
 			<div id=series style=visibility:hidden>Series Name: <input type=text id=serName></div>
 			<div id=seriesNum style=visibility:hidden>Number in Series: <input type=number id=seriesN></div>
+			<button type=submit value=submit>Submit</button>
 		</form>
 	</body>
 </html>

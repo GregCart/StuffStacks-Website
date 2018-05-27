@@ -10,7 +10,7 @@ public class Video {
 	private String type;
 	private File fileName;
 	private URL link;
-	private double SE;
+	private Object SE;
 	private double length;
 	private Date released;
 	private Boolean isSeason;
@@ -29,7 +29,7 @@ public class Video {
 		return type;
 	}
 	
-	public double getSE() {
+	public Object getSE() {
 		return SE;
 	}
 	
@@ -55,7 +55,7 @@ public class Video {
 	
 	 
 	//setters
-	public Video(String title, String creator, String type, double SE, URL link, double length, Date released, Boolean isSeason) {
+	public Video(String title, String creator, String type, Object SE, URL link, double length, Date released, Boolean isSeason) {
 		this.title = title;
 		this.creator = creator;
 		this.type = type;
@@ -67,7 +67,7 @@ public class Video {
 		seasonCheck(isSeason);
 	}
 	
-	public Video(String title, String creator, String type, double SE, File fileName, double length, Date released, Boolean isSeason) {
+	public Video(String title, String creator, String type, Object SE, File fileName, double length, Date released, Boolean isSeason) {
 		this.title = title;
 		this.creator = creator;
 		this.type = type;
@@ -79,7 +79,7 @@ public class Video {
 		seasonCheck(isSeason);
 	}
 	
-	public Video(String title, String creator, String type, double SE, File fileName, URL link, double length, Date released, Boolean isSeason) {
+	public Video(String title, String creator, String type, Object SE, File fileName, URL link, double length, Date released, Boolean isSeason) {
 		this.title = title;
 		this.creator = creator;
 		this.type = type;
