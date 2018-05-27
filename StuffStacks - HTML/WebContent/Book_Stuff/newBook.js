@@ -36,4 +36,3 @@ function showSeries() {
 		document.getElementById("seriesNum").style.visibility = "Hidden";
 	}
 }
-

@@ -8,17 +8,17 @@
 		<style type="text/css"></style>
 	</head>
 	<body>
-		<form method=get target=vHome.html onsubmit="storeVid()">
+		<form method=get target="" onsubmit="storeVid()" action="../src/SS_servelets/vHome.java">
 			<div id=title>Title:<input type="text" id=titl></div>
 			<div id=author>Creator: <input type=text id=create></div>
 			<div id=vidType>Video Type: <input type=text id=type></div>
 			<div id=released>Date you found it: <input type=date id=found></div>
-			<div id=length>Length of Video (w/ a "." instead of a ":"): <input type="number" id=lengt></div>
+			<div id=length>Length of Video <i>(w/ "." instead of ":")</i>: <input type="text" id=lengt></div>
 			<div id=fileName>If you have a .mp4, Specify the filepath: <input type=file id=fileN></div>
 			<div id=link>If you have a link, paste it Here: <input type="url" id=Link></div>
-			<div id=isSeries>Check if part of Season: <input type=checkbox id=isS onChange="showSeason"></div>
+			<div id=isSeries>Check if part of Season: <input type=checkbox id=isS onChange="showSeason()"></div>
 			<div id=season style=visibility:hidden>Season Name: <input type=text id=seasonName></div>
-			<div id=seasonNum style=visibility:hidden>Season Number: <input type=text id=seasnNum></div>
+			<div id=seasonNum style=visibility:hidden>Season Number: <input type=number id=seasnNum></div>
 			<div id=espisodeName style=visibility:hidden>Episode Name: <input type=text id=epiName></div>
 			<div id=episodeNum style=visibility:hidden>Episode Number: <input type=number id=epiNum></div>
 			<button type=submit value=submit>Submit</button>
