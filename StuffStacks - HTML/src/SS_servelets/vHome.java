@@ -36,11 +36,12 @@ public class vHome extends HttpServlet {
 	 */
 	@SuppressWarnings("null")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		File f = new File("D:\\Programming\\Workspaces\\Eclipse\\Apps\\StuffStacks - HTML\\bin\\WebContent\\Contents.txt");
+		File f = new File("D:\\Programming\\Workspaces\\Eclipse\\Apps\\StuffStacks - HTML\\bin\\WebContent\\Vids.txt");
 		
 		if (!f.exists()) {
 			f.createNewFile();
 		}
+
 		
 		String title = request.getParameter("title");
 		String creator = request.getParameter("create");
@@ -54,6 +55,7 @@ public class vHome extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//System.out.println(fDate);
 		String length = request.getParameter("lengt");
 		double Flength = Double.parseDouble(length);
 		String link = request.getParameter("Link");
@@ -93,7 +95,15 @@ public class vHome extends HttpServlet {
 		} else {
 			SE = Double.parseDouble(SNS);
 		}
-		Video video = new Video(title, creator, type, SE, fFile, fLink, Flength, fDate, isSeason);
+		
+		Video video;
+		if(isSeason == true && fFile != null && fLink != null) {
+			video = new Video(title, creator, type, SE, fFile, fLink, Flength, fDate, isSeason);
+		} else if (isSeason == true && fFile != null && fLink == null) {
+			video = new Video(title, creator, type, SE, fFile, Flength, fDate, isSeason);
+		} else {
+			video = new Video(title, creator, type, SE, fLink, Flength, fDate, isSeason);
+		}
 		
 		Gson g = new Gson();
 		String j = g.toJson(video);

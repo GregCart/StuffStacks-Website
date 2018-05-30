@@ -2,6 +2,9 @@
     <wb-module deploy-name="StuffStacks - HTML">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="StuffStacks - Java.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/StuffStacks - Java/StuffStacks - Java">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="StuffStacks_-_HTML"/>
         <property name="java-output-path" value="/StuffStacks - HTML/build/classes"/>
     </wb-module>
