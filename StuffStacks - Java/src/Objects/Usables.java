@@ -78,11 +78,11 @@ public class Usables {
 		String s3 = V.getTitle();
 		Date d5 = V.getDate();
 		double i6 = V.getLength();
-		String s7 = V.getSE().toString();
+		Object o7 = V.getSE();
 		URL u8 = V.getLink();
 		File f9 = V.getFileName();
 		Boolean b10 = V.getIsSeason();
-		Object[] usableVideo = {s3, s1, s2, s7, f9, u8, i6, d5, b10};
+		Object[] usableVideo = {s3, s1, s2, o7, f9, u8, i6, d5, b10};
 		return usableVideo;
 	}
 }

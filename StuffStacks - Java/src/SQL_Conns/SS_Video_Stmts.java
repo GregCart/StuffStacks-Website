@@ -54,7 +54,6 @@ public class SS_Video_Stmts {
 			}
 	}
 	
-	@SuppressWarnings("null")
 	public static Video retrieveVideo(Connection con, Video v) throws SQLException, IOException {
 		duplicate = ifExists(con, v);
 		if (duplicate == true) {

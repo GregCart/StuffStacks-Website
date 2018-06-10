@@ -1,7 +1,0 @@
-package testers;
-
-public class testBook {
-	
-	Video v = new Video("First Kiss", )
-
-}

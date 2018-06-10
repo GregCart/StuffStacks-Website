@@ -6,9 +6,11 @@
 		<script type="text/javascript" src="vHome.js"></script>
 		<style type="text/css"></style>
 	</head>
-	<body>
+	<body onLoad=displayVids()>
 		<div id=add><button onClick=newVid()>Add A Video</button></div>
 		<div id=search><input type=search placeholder="Search for a Video..."></div>
-		<div id=view></div>
+		<div id=view>
+			<ol id=list></ol>
+		</div>
 	</body>
 </html>

@@ -8,7 +8,7 @@
 		<style type="text/css"></style>
 	</head>
 	<body>
-		<form method=get target="" onsubmit="storeVid()" action="../vHome">
+		<form method=get target="vHome.html" onsubmit="storeVid()" action="../vHome/ins">
 			<div id=title>Title:<input type="text" id=titl name=titl></div>
 			<div id=author>Creator: <input type=text id=create name=create></div>
 			<div id=vidType>Video Type: <input type=text id=type name=type></div>
@@ -17,7 +17,7 @@
 			<div id=fileName>If you have a .mp4, Specify the filepath: <input type=file id=fileN name=fileN></div>
 			<div id=link>If you have a link, paste it Here: <input type="url" id=Link name=Link></div>
 			<div id=isSeries>Check if part of Season: <input type=checkbox id=isS name=isS onChange="showSeason()"></div>
-			<div id=seasons name=seasons style=visibility:hidden>
+			<div id=seasons style=visibility:hidden>
 				<div id=season>Season Name: <input type=text id=seasonName name=seasonName></div>
 				<div id=seasonNum>Season Number: <input type=number id=seasnNum name=seasnNum></div>
 				<div id=espisodeName>Episode Name: <input type=text id=epiName name=epiName></div>

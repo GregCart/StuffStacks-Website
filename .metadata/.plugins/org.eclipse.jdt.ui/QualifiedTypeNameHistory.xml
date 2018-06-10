@@ -6,14 +6,12 @@
 <fullyQualifiedTypeName name="java.awt.print.Book"/>
 <fullyQualifiedTypeName name="SQL_Conns.Book"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
-<fullyQualifiedTypeName name="Objects.Book"/>
 <fullyQualifiedTypeName name="Objects.Song"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="Objects.Image"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="testSolutions.Usables"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="SQL_Conns.SS_Con"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -35,4 +33,16 @@
 <fullyQualifiedTypeName name="com.google.gson.JsonArray"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="Objects.Book"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebInitParam"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
+<fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
+<fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="Objects.Usables"/>
 </qualifiedTypeNameHistroy>

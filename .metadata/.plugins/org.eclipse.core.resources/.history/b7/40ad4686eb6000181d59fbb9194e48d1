@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="StuffStacks - HTML">
-        <property name="context-root" value="StuffStacks_-_HTML"/>
-        <property name="java-output-path" value="/StuffStacks - HTML/build/classes"/>
-    </wb-module>
-</project-modules>

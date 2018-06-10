@@ -3,6 +3,7 @@
 	<name>StuffStacks - HTML</name>
 	<comment></comment>
 	<projects>
+		<project>Servers</project>
 		<project>StuffStacks - Java</project>
 	</projects>
 	<buildSpec>

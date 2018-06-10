@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="CleanDialogSettings">
 		<item value="500" key="DIALOG_WIDTH"/>
-		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 		<item value="402" key="DIALOG_HEIGHT"/>
 		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="252" key="DIALOG_Y_ORIGIN"/>
@@ -11,6 +11,9 @@
 		<item value="Aggregate for window 1525827801938" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
 		<item value="true" key="LINK_NAVIGATOR_TO_EDITOR"/>
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="D:\Programming\Workspaces\Eclipse\practice" key="OUTSIDE_LOCATION"/>
 	</section>
 	<section name="SaveAsDialogSettings">
 		<item value="525" key="DIALOG_WIDTH"/>

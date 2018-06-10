@@ -3,7 +3,7 @@
 	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
-	<item value="D:\Downloads\Programming\GSON" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\Downloads\Programming" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
@@ -38,7 +38,7 @@
 		<item value="false" key="create_package_info_java"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="1" key="pageIndex"/>
+		<item value="0" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>

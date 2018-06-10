@@ -11,7 +11,12 @@
     <welcome-file>home.html</welcome-file>
   </welcome-file-list>
   <servlet>
-  	<servlet-class>vHome.java</servlet-class><servlet-name>vHome</servlet-name>
-  	
+  	<servlet-name>vHome</servlet-name>
+  	<servlet-class>SS_servelets.vidCalls</servlet-class>
   </servlet>
+  <servlet-mapping>
+  	<servlet-name>vHome</servlet-name>
+  	<url-pattern>/vHome/ins</url-pattern>
+  	<url-pattern>/vHome/get</url-pattern>
+  </servlet-mapping>
 </web-app>

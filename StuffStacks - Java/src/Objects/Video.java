@@ -91,7 +91,7 @@ public class Video {
 		this.isSeason = isSeason;
 		seasonCheck(isSeason);
 	}
-	@SuppressWarnings("null")
+	
 	private void seasonCheck(Boolean isCD) {
 		if (isCD == false) {
 			SE = (Double) null;
